@@ -9,7 +9,7 @@ SYNOPSIS
 DESCRIPTION
        Print NAME with any leading directory components removed.  If specified, also remove a trailing SUFFIX.
 ```
-That is, `basename $file .ext` will give extract a filename from `$file` for you, without a path an without an extension `.ext` (if specified).
+That is, `basename $file .ext` will extract a filename from `$file` for you, without a path and without an extension `.ext` (if specified).
 
 ## An example
 ### Initial directory structure
@@ -46,7 +46,7 @@ And the following directory structure (two output files created for each input .
     └── file2.tsv
 ```
 
-See the script [source](./run_stuff.sh)
+See the script [source](./run_stuff.sh). I just have used `touch` to create empty files, for demo purposes.
 
 ### Processing the stuff
 Now assume we want to process each pair of output files from the previous step. After we run `./process_stuff.sh` we'll have:
