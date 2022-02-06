@@ -7,6 +7,7 @@ A place for various tiny code-snippets, stuff for discussion, etc.
   - [every-file](./run_for_every_file.sh) -- a boilerplate shellscript to run a command for every file in the current directory (or in some directory; or some type of files in some directory, etc.);
   - [every-file-parallel](./run_for_every_file_parallel.sh) -- same, but in parallel (with GNU [Parallel](https://www.gnu.org/software/parallel/)) (`./parallel_script.sh` is needed just for testing);
   - [example](./example/example.md) -- a quick illustration of `basename` for file processing;
+  - [files_from_stdin.py](./files_from_stdin.py) -- passing a list of files from stdin (e.g., from `ls`)
 - **Folders:**
   - [data](./data/) is where the (demo-) data is stored;
   - [resutls](./results/) is the folder for outputs and results (figures, etc.)
