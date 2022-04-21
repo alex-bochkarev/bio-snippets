@@ -1,0 +1,41 @@
+#+TITLE: How to join two files.
+
+Assume you have two files:
+
+#+begin_src bash
+  $ cat ./file1.txt
+
+  f1 f2 f3
+  a 1 -1
+  b 2 -1
+  c 3 -1
+  d 4 -1
+
+  $ cat ./file2.txt
+
+  f1 f2 f3
+  b 7 -2
+  d 8 -2
+  e 10 -2
+#+end_src
+
+Let's say we want to join these two files by =f1= field. This can be done with a standard GNU/Linux =join= as follows:
+#+begin_src bash
+ $ join --header -a1 -a2 -eNA file1.txt -o 0 1.2 1.3 2.2 2.3 file2.txt
+f1 f2 f3 f2 f3
+a 1 -1 NA NA
+b 2 -1 7 -2
+c 3 -1 NA NA
+d 4 -1 8 -2
+e NA NA 10 -2 
+#+end_src
+
+with the options being:
+- =--header= treats the first line as a header (no matching done),
+- =a1= and =a2= prints lines that are present in one file only,
+- =-eNA= fills in empty values with =NA=,
+- =file1.txt=, =file2.txt= are, obviously, file names.
+- =-o 0 1.2 1.3 2.2 2.3= sets the output format:
+  + matched field first (=0=)
+  + =1.2= and =1.3= -- the second and third fields of the first file
+  + =2.2= and =2.3= -- the second and third fields of the second file
