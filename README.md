@@ -9,6 +9,8 @@ A place for various tiny code-snippets, stuff for discussion, etc.
   - [example](./example/example.md) -- a quick illustration of `basename` for file processing;
   - [files_from_stdin.py](./files_from_stdin.py) -- passing a list of files from stdin (e.g., from `ls`). Then just do `ls | ./files_from_stdin.py`.
   - [command line join](./join.org) -- joining two csv files with `join` tool from `coreutils` (in GNU/Linux)
+  - [removing too NANed lines](killing-NAs/README.org) -- printing lines containing no more than X NANs.
+
 - **Folders:**
   - [data](./data/) is where the (demo-) data is stored;
   - [resutls](./results/) is the folder for outputs and results (figures, etc.)
