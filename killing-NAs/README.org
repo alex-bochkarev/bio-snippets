@@ -48,6 +48,8 @@ It seems, it worked. To cross-check:
  16 total
 #+end_src
 
+An alternative implementation that counts tab-separated NAs (empty fields) and
+opens the file directly is [[file:splitstuff.c][here]].
 
 * The small program.
 #+begin_src C
